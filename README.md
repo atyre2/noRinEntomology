@@ -5,7 +5,7 @@ Webinar on Reproducibility tools in R developed for the Entomological Society of
 1. Why worry?
   * Liz vs. the reviewers
   * What's your ClimateGate? -- importance of credibility to the science/policy interface.
-2. The big picture (from ... 
+2. The big picture (from Christopher Gandrud's book on RR with R and RStudio) 
   * Document everything
   * Everything is a (text) file
   * All files should be human readable
@@ -13,7 +13,7 @@ Webinar on Reproducibility tools in R developed for the Entomological Society of
   * Plan the organization, storage and sharing of your files
 2. Organizing your workflow
   * Directory structure
-  * File naming conventions
+  * File naming conventions -- e.g. CamelBack style
   * RStudio projects
 3. Concept of a Source Document as the target of all work
   * Code plus words in a single document
