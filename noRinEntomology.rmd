@@ -1,0 +1,71 @@
+---
+title: "There is no R in Entomology (but there is one in Reproducible)"
+author: "Drew Tyre"
+date: "November 1, 2015"
+output: 
+  ioslides_presentation:
+    css: custom.css
+---
+
+## Outline for the webinar
+1. Why worry?
+2. The big picture (from Christopher Gandrud's book on RR with R and RStudio) 
+2. Organizing your workflow
+3. Concept of a Source Document as the target of all work
+4. Version Control & Collaboration
+5. Wrapping up
+
+## Why Worry? {.build}
+- Personal Reasons -- Liz and the revisions
+- Credibility
+  * Stephen Heard's blogpost [Reproducibility, your methods, and 400 years of Angst](http://bit.ly/1wVSkmk) 
+  * The 1^st^ leg of the science-policy interface (Cash et al 2003)
+  
+## The big picture (Gandrud, 2015)
+- Plan the organization, storage and sharing of your files
+- Document everything
+- Everything is a (text) file
+- All files should be human readable
+- Explicitly tie files together
+
+# Organizing your workflow
+
+## Bad (no?) Directory Structure
+![Bad directory Structure](images/Ugly_directory_screenshot.png)
+
+## Better Directory Structure
+![Better directory structure](images/good_directory_screenshot.png)
+
+## Put everything in one directory
+- All the code, data, outputs etc. 
+- Make this directory an RStudio Project
+- This will always be the "working directory"
+
+## Use relative paths
+- Breaks on another computer, OS, user
+```
+mydataframe <- read.table(
+"C:\\users\\Drew\\Box Sync\\Teaching\\noRinEntomology\\data\\e418.tab")
+```
+- Works with all OS, for any computer if directory is copied completely. Easier to read. 
+
+```
+mydataframe <- read.table("data/e418.tab")
+```
+
+## NoSpaces
+- spaces in filenames and directories cause problems for automation
+- use CamelBack style filenames for readibility
+
+## One useful structure
+- all documents in root directory produce "outputs" (presentations, manuscripts)
+- subdirectories for data, code, images, and "automatic outputs"
+
+## 
+
+## References
+
+Cash et al (2003) Knowledge systems for sustainable development PNAS 100, 8086-8091.
+
+Gandrud, C. (2015) Reproducible Research with R and RStudio. CRC Press, London.
+  
