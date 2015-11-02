@@ -1,0 +1,17 @@
+noRinEntomology
+|   .Rhistory
+|   LICENSE.md
+|   noRinEntomology.html
+|   noRinEntomology.rmd
+|   noRinEntomology.Rproj
+|   README.md
+|   
++---code
+|       custom.css
+|       
++---data
+\---images
+        good_directory_screenshot.png
+        Ugly_directory_screenshot.png
+        UNL-2C-TAG-small.png
+        
