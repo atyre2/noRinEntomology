@@ -2,15 +2,20 @@
 ## species added
 
 ## assert that dataframe exists
-stopifnot(exists("e418"))
+stopifnot(exists("spRichData"))
 
-suppressMessages(library(dplyr))
+## assert that GAM model has been fit
+stopifnot(exists("richness.gam"))
 
-spRichData <- group_by(e418,Year,Plot,Specific.epithet) %>%
-  summarize(NumSp=first(NumSp)) %>%
-  summarize(InsectRich = n(), NumSp=first(NumSp))
+
+myGrey = rgb(0.2,0.2,0.2,0.2)
+ 
 old.par=par(mar=c(5,4,0,0))
 plot(InsectRich~jitter(NumSp),xlab="Number of added species",
      ylab="Number of insect species per year",
-     data=spRichData)
+     data=spRichData,pch=19,col=myGrey)
+
+nd = data.frame(NumSp=0:18)
+pred = predict(richness.gam,newdata=nd,type="response")
+lines(nd$NumSp,pred,lwd=3,col="red")
 par(old.par)

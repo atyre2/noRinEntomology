@@ -2,56 +2,68 @@
 title: "There is no R in Entomology (but there is one in Reproducible)"
 author: "Drew Tyre"
 date: "November 1, 2015"
-output: 
+output:
   ioslides_presentation:
-    css: code/custom.css
+    css: css/custom.css
+
 ---
 
 ## Outline for the webinar
-1. Why worry?
+1. Why worry? (and why R?)
 2. The big picture (from Christopher Gandrud's book on RR with R and RStudio) 
-2. Organizing your workflow
-3. Concept of a Source Document as the target of all work
+3. Organizing your workflow
 4. Version Control & Collaboration
 5. Wrapping up
+
+## Publicly available
+
+- All code, presentations, examples etc. licensed CC BY-NC-SA 4.0
+- Available here: [github.com/atyre2/noRinEntomology](https://github.com/atyre2/noRinEntomology)
 
 ## Why Worry? {.build}
 - Personal Reasons -- Liz and the revisions
 - Credibility
   * Stephen Heard's blogpost [Reproducibility, your methods, and 400 years of Angst](http://bit.ly/1wVSkmk) 
   * The 1^st^ leg of the science-policy interface (Cash et al 2003)
+- Average scientist spends 30% of time developing software
+  * 90% are self taught! (Wilson et al. 2014)
   
+## Why R?
+- Free
+- Widely used 
+- Rapid development (not always good ...)
+- Total integration of analysis and graphics
+
+## S came before R
+- “S” invented by Rick Becker, John Chambers, Allan Wilks at AT&T Labs
+- Emphasis on graphics and modelling
+- S-PLUS is the commercial implementation
+- Ross Ihaka and Robert Gentleman, U of Auckland wrote a version of the S language, released under a GPL in 1995
+
+## Why RStudio?
+- Free ... 
+- Reduces errors (Brace matching, syntax highlighting)
+- Integrates "knitting" analysis and text
+
+## Can be done elsewhere
+- SAS now has a documentation system
+- LaTex works with anything
+- Less integration; more work
+
 ## The big picture (Gandrud, 2015)
+- Plan the organization, storage and sharing of your files
 - Everything is a (text) file
 - All files should be human readable
 - Document everything
-- Plan the organization, storage and sharing of your files
 - Explicitly tie files together
-
-# Everything is a text file
-
-## Write scripts!
-
-- A script is a text file with commands for the computer
-- Human readable
-- Provides documentation for everything done to the data
-
-## Don't trust the workspace
-
-- best practice: rerun all code everytime you start working
 
 # Organizing your workflow
 
-## Bad Directory Structure
-![Bad directory Structure](images/Ugly_directory_screenshot.png)
-
-## Better Directory Structure
-![Better directory structure](images/good_directory_screenshot.png)
-
 ## Put everything in one directory
 - All the code, data, outputs etc. 
-- Make this directory an RStudio Project
+- Make this directory an *RStudio Project*
 - This will always be the "working directory"
+
 
 ## Use relative paths
 - Breaks on another computer, OS, user
@@ -95,13 +107,51 @@ noRinEntomology
 ## Why put code in a sub-directory?
 - Reduces clutter
 - Enables re-use between output documents
-- Warning -- relative paths start from project working directory (usually!)
+- Warning -- relative paths start from project working directory 
 
 ## Example: plot of species richness
 ```{r speciesRichness, message=FALSE}
-source("code/downLoadData.r")
-source("code/insectSpeciesRichness.r")
+e418 <- read.csv("data/e418.csv")
+source("code/calculateRichness.r")
+library(lattice)
+xyplot(InsectRich~jitter(Year)|NumSp,data=spRichData)
 ```
+
+## Example: plot of species richness
+```{r speciesRichness2, message=FALSE}
+xyplot(InsectRich~jitter(NumSp)|Year,data=spRichData)
+```
+
+# Everything is a text file
+
+## Write scripts!
+
+- A script is a text file with commands for the computer
+- Human readable
+- Provides documentation for everything done to the data
+
+## Keep raw data in text files
+
+- If possible -- large data causes problems
+- Most future proof format
+- easy to check
+- Treat data as "read-only"
+- Do "data cleaning" in scripts -- REPRODUCIBLE! DOCUMENTED!
+
+## Don't trust the workspace
+
+- best practice: rerun all code everytime you start working
+- gets complicated with long-running analyses
+ 
+
+# Version Control and collaboration
+
+## Version control
+
+- What was done when and by who
+- Back up to previous versions
+- Ghetto VC: put the date in the file name and comments at the start
+  - Filename explosion! 
 
 ## Collaboration -- sharing with others
 - sending code and data via email is fragile
@@ -113,25 +163,43 @@ blowflies <- source_DropboxData("blowflytest.csv","o0jguchss5vu2ct",            
                                 cache=TRUE)
 ```
 ## More on Dropbox ... 
+
 <div class="columns-2">
-  <div class="centered">Good:</div>
+
+  <div class="centered">*Good:*</div>
   - upload new version with same name old version still available for 30 days (longer with paid account)
   - Can share an entire folder with collaborators -- all can upload/download
-   
-   
-   
 
- <div class="centered">Bad:</div>
+
+ <div class="centered">*Bad:*</div>
   - Old keys still point to old versions, even though updated version available
   - No documentation of what changed in new version
 </div>
 
+## Optimal -- use Git
+- Version control system built into RStudio
+- Install, turn on for each project
+  * Demonstrate
+- Can hook up to a "remote repository" for sharing
+  * Github - free but public
+  * Your institution can run GitLab locally
+  
+# Wrapping up
 
-## 
+## What next?
+
+> - Download R & RStudio and get started!
+> - Software / Data Carpentry workshops
+> - Read Gandrud (2015)
+> - Take my courses! (contact me atyre2@unl.edu)
+
 
 ## References
 
 Cash et al (2003) Knowledge systems for sustainable development PNAS 100, 8086-8091.
 
 Gandrud, C. (2015) Reproducible Research with R and RStudio. CRC Press, London.
+
+Wilson G, Aruliah DA, Brown CT, Chue Hong NP, Davis M, et
+al. (2014) Best Practices for Scientific Computing. PLoS Biol 12(1): e1001745. doi:10.1371/journal.pbio.1001745
   

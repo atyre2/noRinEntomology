@@ -9,5 +9,5 @@ blowflies <- source_DropboxData("blowflytest.csv","o0jguchss5vu2ct",
 library(lattice)
 dotplot(stage~time|temp,data=blowflies)
 
-## what happens to the code if I upload a new version of the file? Does 
-## key stay the same? 
+# if you upload a new version of the file blowflytest.csv, it will get a new key.
+# This file will always point to the old version.
