@@ -2,9 +2,7 @@
 title: "There is no R in Entomology (but there is one in Reproducible)"
 author: "Drew Tyre"
 date: "November 11, 2015"
-output:
-  ioslides_presentation:
-    css: css/custom.css
+output:  ioslides_presentation
 
 ---
 
