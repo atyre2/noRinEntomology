@@ -1,4 +1,5 @@
 ## summarize data to species richness by plot and year
+e418 <- read.csv("data/e418.csv")
 
 suppressMessages(library(dplyr))
 

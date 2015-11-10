@@ -1,7 +1,7 @@
 ---
 title: "There is no R in Entomology (but there is one in Reproducible)"
 author: "Drew Tyre"
-date: "November 1, 2015"
+date: "November 11, 2015"
 output:
   ioslides_presentation:
     css: css/custom.css
@@ -21,7 +21,7 @@ output:
 - Available here: [github.com/atyre2/noRinEntomology](https://github.com/atyre2/noRinEntomology)
 
 ## Why Worry? {.build}
-- Personal Reasons -- Liz and the revisions
+- Personal Reasons -- Drew and the revisions
 - Credibility
   * Stephen Heard's blogpost [Reproducibility, your methods, and 400 years of Angst](http://bit.ly/1wVSkmk) 
   * The 1^st^ leg of the science-policy interface (Cash et al 2003)
@@ -43,12 +43,16 @@ output:
 ## Why RStudio?
 - Free ... 
 - Reduces errors (Brace matching, syntax highlighting)
-- Integrates "knitting" analysis and text
+- Integrates "knitting" analysis and text together
+- Integrates version control
+
+## Take a look at R/RStudio
+- R as a calculator
 
 ## Can be done elsewhere
 - SAS now has a documentation system
 - LaTex works with anything
-- Less integration; more work
+- Less integration; more manual work
 
 ## The big picture (Gandrud, 2015)
 - Plan the organization, storage and sharing of your files
@@ -111,15 +115,9 @@ noRinEntomology
 
 ## Example: plot of species richness
 ```{r speciesRichness, message=FALSE}
-e418 <- read.csv("data/e418.csv")
 source("code/calculateRichness.r")
 library(lattice)
 xyplot(InsectRich~jitter(Year)|NumSp,data=spRichData)
-```
-
-## Example: plot of species richness
-```{r speciesRichness2, message=FALSE}
-xyplot(InsectRich~jitter(NumSp)|Year,data=spRichData)
 ```
 
 # Everything is a text file
@@ -150,6 +148,7 @@ xyplot(InsectRich~jitter(NumSp)|Year,data=spRichData)
 
 - What was done when and by who
 - Back up to previous versions
+- Anything manually created should be in version control
 - Ghetto VC: put the date in the file name and comments at the start
   - Filename explosion! 
 
@@ -191,7 +190,7 @@ blowflies <- source_DropboxData("blowflytest.csv","o0jguchss5vu2ct",            
 > - Download R & RStudio and get started!
 > - Software / Data Carpentry workshops
 > - Read Gandrud (2015)
-> - Take my courses! (contact me atyre2@unl.edu)
+> - Take my courses! "From zeRo to heRo in 16 weeks" (contact me atyre2@unl.edu)
 
 
 ## References

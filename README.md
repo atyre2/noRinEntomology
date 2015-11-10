@@ -1,9 +1,17 @@
 # noRinEntomology
-Webinar on Reproducibility tools in R developed for the Entomological Society of America
+Webinar on Reproducibility tools in R developed for the Entomological Society of America, and delivered on November 11, 2015. 
+
+## Software tools
+The following pieces of software will be demonstrated during the webinar:
+[R -- install latest version](https://cran.r-project.org)
+[RStudio -- Excellent Integrated Development environment for R](https://www.rstudio.com)
+[Git -- optional for version control](http://git-scm.com)
+
+You must install R before RStudio; I believe Git can be installed at any time. 
 
 ## Outline
 1. Why worry?
-  * Liz vs. the reviewers
+  * Drew vs. the reviewers
   * What's your ClimateGate? -- importance of credibility to the science/policy interface.
 2. The big picture (from Christopher Gandrud's book on RR with R and RStudio) 
   * Document everything
