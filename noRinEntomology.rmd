@@ -9,7 +9,7 @@ output:
 ---
 
 ## Outline for the webinar
-1. Why worry? (and why R?)
+1. Why woRry? (and why R?)
 2. a whiRlwind touR
 3. Organizing your workflow
 4. Version Control & Collaboration
