@@ -2,4 +2,5 @@
 .Rhistory
 .RData
 noRinEntomology.html
-testing.*
+output/
+testing*
