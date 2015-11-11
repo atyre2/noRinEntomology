@@ -47,6 +47,7 @@ output:
 - Integrates version control
 
 # staRting the touR
+
 ## Take a look at R/RStudio
 - R as a calculator
 
@@ -140,11 +141,19 @@ xyplot(InsectRich~jitter(Year)|NumSp,data=spRichData)
 
 ## Version control
 
+<<<<<<< HEAD
 - What was done when and by who
 - Back up to previous versions
 - Anything manually created should be in version control
 - Ghetto VC: put the date in the file name and comments at the start
     - Filename explosion! 
+=======
+> - What was done when and by who
+> - Back up to previous versions
+> - Anything manually created should be in version control
+> - Ghetto VC: put the date in the file name and comments at the start
+      - Filename explosion! 
+>>>>>>> eb7f3ed97015aa7e36128184fd428d6523923a42
 
 ## Collaboration -- sharing with others
 - sending code and data via email is fragile

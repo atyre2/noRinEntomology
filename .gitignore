@@ -1,6 +1,12 @@
 .Rproj.user
 .Rhistory
 .RData
+<<<<<<< HEAD
 testing*
 output/
 *.html
+=======
+noRinEntomology.html
+output/
+testing*
+>>>>>>> eb7f3ed97015aa7e36128184fd428d6523923a42
