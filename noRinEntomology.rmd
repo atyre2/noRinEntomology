@@ -38,7 +38,7 @@ output:
 - “S” invented by Rick Becker, John Chambers, Allan Wilks at AT&T Labs
 - Emphasis on graphics and modelling
 - S-PLUS is the commercial implementation
-- Ross Ihaka and Robert Gentleman, U of Auckland wrote a version of the S language, released under a GPL in 1995
+- **R**oss Ihaka and **R**obert Gentleman, U of Auckland wrote a version of the S language, released under a GPL in 1995
 
 ## Why RStudio?
 - Free ... 
@@ -144,7 +144,7 @@ xyplot(InsectRich~jitter(Year)|NumSp,data=spRichData)
 - Back up to previous versions
 - Anything manually created should be in version control
 - Ghetto VC: put the date in the file name and comments at the start
-  - Filename explosion! 
+    - Filename explosion! 
 
 ## Collaboration -- sharing with others
 - sending code and data via email is fragile
@@ -172,10 +172,10 @@ blowflies <- source_DropboxData("blowflytest.csv","o0jguchss5vu2ct",            
 ## Optimal -- use Git
 - Version control system built into RStudio
 - Install, turn on for each project
-  * Demonstrate
+    * Demonstrate
 - Can hook up to a "remote repository" for sharing
-  * Github - free but public
-  * Your institution can run GitLab locally
+    * Github - free but public
+    * Your institution can run GitLab locally
   
 # Wrapping up
 

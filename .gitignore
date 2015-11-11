@@ -1,5 +1,6 @@
 .Rproj.user
 .Rhistory
 .RData
-noRinEntomology.html
-testing.*
+testing*
+output/
+*.html
