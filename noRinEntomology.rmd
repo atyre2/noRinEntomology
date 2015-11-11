@@ -2,13 +2,15 @@
 title: "There is no R in Entomology (but there is one in Reproducible)"
 author: "Drew Tyre"
 date: "November 11, 2015"
-output:  ioslides_presentation
+output:  
+  ioslides_presentation:
+    css: css/custom.css
 
 ---
 
 ## Outline for the webinar
 1. Why worry? (and why R?)
-2. The big picture (from Christopher Gandrud's book on RR with R and RStudio) 
+2. a whiRlwind touR
 3. Organizing your workflow
 4. Version Control & Collaboration
 5. Wrapping up
@@ -18,13 +20,13 @@ output:  ioslides_presentation
 - All code, presentations, examples etc. licensed CC BY-NC-SA 4.0
 - Available here: [github.com/atyre2/noRinEntomology](https://github.com/atyre2/noRinEntomology)
 
-## Why Worry? {.build}
-- Personal Reasons -- Drew and the revisions
-- Credibility
-  * Stephen Heard's blogpost [Reproducibility, your methods, and 400 years of Angst](http://bit.ly/1wVSkmk) 
-  * The 1^st^ leg of the science-policy interface (Cash et al 2003)
-- Average scientist spends 30% of time developing software
-  * 90% are self taught! (Wilson et al. 2014)
+## Why Worry? 
+> - Personal Reasons -- Drew and the revisions
+> - Credibility
+    * The 1^st^ leg of the science-policy interface (Cash et al 2003)
+    * Stephen Heard's blogpost [Reproducibility, your methods, and 400 years of Angst](http://bit.ly/1wVSkmk) 
+> - Average scientist spends 30% of time developing software
+    * 90% are self taught! (Wilson et al. 2014)
   
 ## Why R?
 - Free
@@ -44,6 +46,7 @@ output:  ioslides_presentation
 - Integrates "knitting" analysis and text together
 - Integrates version control
 
+# staRting the touR
 ## Take a look at R/RStudio
 - R as a calculator
 
@@ -51,13 +54,6 @@ output:  ioslides_presentation
 - SAS now has a documentation system
 - LaTex works with anything
 - Less integration; more manual work
-
-## The big picture (Gandrud, 2015)
-- Plan the organization, storage and sharing of your files
-- Everything is a (text) file
-- All files should be human readable
-- Document everything
-- Explicitly tie files together
 
 # Organizing your workflow
 
